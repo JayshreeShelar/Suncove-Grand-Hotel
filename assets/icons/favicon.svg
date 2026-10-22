@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Lotus emblem (gold on navy), matching the logo in the header. -->
+  <rect width="64" height="64" rx="14" fill="#0b1523"/>
+  <g fill="#dcbc82">
+    <path d="M32 11C25.5 19 24 28 32 41 40 28 38.500 19 32 11Z"/>
+    <path d="M32 41C21.500 37 16 28.500 17.500 19.500 26 21.500 31 30 32 41Z"/>
+    <path d="M32 41C42.500 37 48 28.500 46.500 19.500 38 21.500 33 30 32 41Z" />
+    <path d="M32 43C19 45.500 10 39.500 7 30.500 17.500 30 27 34.500 32 43Z"/>
+    <path d="M32 43C45 45.500 54 39.500 57 30.500 46.500 30 37 34.500 32 43Z"/>
+  </g>
+  <path d="M16 48C25 55 39 55 48 48" fill="none" stroke="#dcbc82" stroke-width="3" stroke-linecap="round"/>
+</svg>

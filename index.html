@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suncove Grand Hotel | More Than a Stay, It's an Experience</title>
+  <meta name="description" content="Discover comfort, elegance and breathtaking views at Suncove Grand Hotel. Send us an enquiry for rooms, dining and events.">
+  <meta name="theme-color" content="#0b1523">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="#home" class="brand" aria-label="Suncove Grand Hotel, home">
+        <i class="fa-solid fa-spa brand__emblem" aria-hidden="true"></i>
+        <span class="brand__text">
+          <span class="brand__name">Suncove</span>
+          <span class="brand__sub">Grand Hotel</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link is-active">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#rooms" class="nav__link">Rooms</a></li>
+          <li><a href="#amenities" class="nav__link">Amenities</a></li>
+          <li><a href="#gallery" class="nav__link">Gallery</a></li>
+          <li><a href="#location" class="nav__link">Location</a></li>
+        </ul>
+        <a href="#enquire" class="btn btn--outline nav__cta-mobile">
+          <i class="fa-regular fa-calendar" aria-hidden="true"></i> Enquire Now
+        </a>
+      </nav>
+
+      <a href="#enquire" class="btn btn--outline header__cta">
+        <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Enquire Now
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" aria-label="Welcome">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__bg-layer is-visible" id="bgLayerA"></div>
+        <div class="hero__bg-layer" id="bgLayerB"></div>
+        <div class="hero__shade"></div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow">Luxury Stays <span class="eyebrow__dot" aria-hidden="true"></span> Unforgettable Experiences</p>
+          <h1 class="hero__title">
+            More Than a Stay
+            <em>It's an Experience</em>
+          </h1>
+          <span class="rule" aria-hidden="true"></span>
+          <p class="hero__text">Discover a world of comfort, elegance and breathtaking views at Suncove Grand Hotel. Where every moment feels special.</p>
+          <a href="#rooms" class="btn btn--gold">Explore Rooms <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="carousel" id="carousel" role="region" aria-roledescription="carousel" aria-label="Hotel highlights">
+          <div class="carousel__stage" id="carouselStage"></div>
+          <div class="carousel__controls">
+            <button type="button" class="carousel__arrow" id="prevBtn" aria-label="Previous slide"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+            <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Choose slide"></div>
+            <button type="button" class="carousel__arrow" id="nextBtn" aria-label="Next slide"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+          <p class="sr-only" id="carouselStatus" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <!-- Glass enquiry bar -->
+      <form class="enquiry-bar" id="barForm" novalidate aria-label="Quick enquiry">
+        <div class="enquiry-bar__field">
+          <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+          <div class="enquiry-bar__control">
+            <label for="barCheckin">Check In</label>
+            <input type="date" id="barCheckin" name="checkin" required>
+          </div>
+        </div>
+        <div class="enquiry-bar__field">
+          <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+          <div class="enquiry-bar__control">
+            <label for="barCheckout">Check Out</label>
+            <input type="date" id="barCheckout" name="checkout" required>
+          </div>
+        </div>
+        <div class="enquiry-bar__field enquiry-bar__field--select">
+          <i class="fa-regular fa-user" aria-hidden="true"></i>
+          <div class="enquiry-bar__control">
+            <label for="barGuests">Guests</label>
+            <select id="barGuests" name="guests">
+              <option value="1">1 Adult</option>
+              <option value="2" selected>2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
+              <option value="5">5 Adults</option>
+              <option value="6">6 Adults</option>
+              <option value="8">7+ Adults</option>
+            </select>
+          </div>
+          <i class="fa-solid fa-chevron-down enquiry-bar__chev" aria-hidden="true"></i>
+        </div>
+        <button type="submit" class="btn btn--gold enquiry-bar__submit">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i> Send Enquiry <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+        <p class="enquiry-bar__msg" id="barMsg" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="about__inner">
+        <div class="about__media reveal">
+          <figure class="about__shot about__shot--main">
+            <img data-img="suite" alt="Coastal village and pool at sunset" width="640" height="360" loading="lazy">
+            <figcaption class="about__caption">Your Perfect Getaway</figcaption>
+          </figure>
+          <figure class="about__shot"><img data-img="pool" alt="Infinity pool at dusk" width="310" height="232" loading="lazy"></figure>
+          <figure class="about__shot"><img data-img="dining" alt="Candlelit dining table" width="310" height="232" loading="lazy"></figure>
+        </div>
+
+        <div class="about__text reveal">
+          <p class="label">About Suncove Grand Hotel</p>
+          <h2 class="section-title">A Perfect Blend of <br>Luxury &amp; Tranquility</h2>
+          <span class="rule" aria-hidden="true"></span>
+          <p>Nestled in a serene location, Suncove Grand Hotel offers a relaxing escape with world-class amenities, exquisite dining and warm hospitality.</p>
+          <ul class="about__facts" aria-label="Highlights">
+            <li><i class="fa-solid fa-leaf" aria-hidden="true"></i><span>Peaceful retreat</span></li>
+            <li><i class="fa-solid fa-bell-concierge" aria-hidden="true"></i><span>Warm hospitality</span></li>
+            <li><i class="fa-solid fa-sun" aria-hidden="true"></i><span>Scenic views</span></li>
+          </ul>
+          <a href="#gallery" class="btn btn--outline btn--sm">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROOMS ============ -->
+    <section class="section rooms" id="rooms">
+      <div class="section__inner">
+        <header class="section__head reveal">
+          <p class="label">Rooms &amp; Suites</p>
+          <h2 class="section-title">Rest in Quiet Luxury</h2>
+          <span class="rule rule--center" aria-hidden="true"></span>
+        </header>
+        <div class="room-grid">
+          <article class="room-card glass reveal">
+            <div class="room-card__media"><img data-img="room" alt="Premium room with king bed and warm lighting" width="640" height="440" loading="lazy"></div>
+            <div class="room-card__body">
+              <h3>Premium Room</h3>
+              <p>Warm tones, plush bedding and a calm corner to unwind after a day by the sea.</p>
+              <ul class="chips"><li>King bed</li><li>Garden view</li><li>Work desk</li></ul>
+              <a href="#enquire" class="link-arrow" data-enquiry-type="Room Enquiry">Enquire about this room <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="room-card glass reveal">
+            <div class="room-card__media"><img data-img="suite" alt="Ocean view suite overlooking the sea at sunset" width="640" height="440" loading="lazy"></div>
+            <div class="room-card__body">
+              <h3>Ocean View Suite</h3>
+              <p>A private terrace and sweeping sunset views over the water. Our signature suite.</p>
+              <ul class="chips"><li>Private terrace</li><li>Ocean view</li><li>Lounge area</li></ul>
+              <a href="#enquire" class="link-arrow" data-enquiry-type="Room Enquiry">Enquire about this suite <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="room-card glass reveal">
+            <div class="room-card__media"><img data-img="terrace" alt="Rooftop terrace suite with lounge seating" width="640" height="440" loading="lazy"></div>
+            <div class="room-card__body">
+              <h3>Terrace Suite</h3>
+              <p>Spacious living, open-air lounge seating and golden-hour evenings above the resort.</p>
+              <ul class="chips"><li>Rooftop access</li><li>Sea breeze</li><li>Extra space</li></ul>
+              <a href="#enquire" class="link-arrow" data-enquiry-type="Room Enquiry">Enquire about this suite <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AMENITIES ============ -->
+    <section class="section amenities-sec" id="amenities">
+      <div class="section__inner">
+        <header class="section__head reveal">
+          <p class="label">Amenities</p>
+          <h2 class="section-title">Everything for a Perfect Stay</h2>
+          <span class="rule rule--center" aria-hidden="true"></span>
+        </header>
+        <ul class="amenities reveal" aria-label="Hotel amenities">
+          <li class="amenity">
+            <span class="amenity__icon"><i class="fa-solid fa-bed" aria-hidden="true"></i></span>
+            <h3>Luxury Rooms</h3>
+            <p>Elegant &amp; Spacious Accommodations</p>
+          </li>
+          <li class="amenity">
+            <span class="amenity__icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></span>
+            <h3>Fine Dining</h3>
+            <p>Global Cuisine, Local Flavours</p>
+          </li>
+          <li class="amenity">
+            <span class="amenity__icon"><i class="fa-solid fa-water-ladder" aria-hidden="true"></i></span>
+            <h3>Infinity Pool</h3>
+            <p>Relax &amp; Rejuvenate</p>
+          </li>
+          <li class="amenity">
+            <span class="amenity__icon"><i class="fa-solid fa-spa" aria-hidden="true"></i></span>
+            <h3>Wellness Spa</h3>
+            <p>Refresh Your Mind &amp; Body</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery">
+      <div class="section__inner">
+        <header class="section__head reveal">
+          <p class="label">Gallery</p>
+          <h2 class="section-title">Moments at Suncove</h2>
+          <span class="rule rule--center" aria-hidden="true"></span>
+        </header>
+        <div class="gallery__grid">
+          <figure class="g-item g-item--wide reveal"><img data-img="suite" alt="Ocean view suite at sunset" width="800" height="480" loading="lazy"><figcaption>Rooms &amp; Suites <span>Sunset from the terrace</span></figcaption></figure>
+          <figure class="g-item reveal"><img data-img="exterior" alt="Hotel exterior and architecture" width="400" height="480" loading="lazy"><figcaption>Architecture <span>Modern elegance</span></figcaption></figure>
+          <figure class="g-item reveal"><img data-img="dining" alt="Candlelit dining table" width="400" height="480" loading="lazy"><figcaption>Dining <span>Fine dining</span></figcaption></figure>
+          <figure class="g-item reveal"><img data-img="pool" alt="Infinity pool" width="400" height="480" loading="lazy"><figcaption>Pool <span>Leisure &amp; calm</span></figcaption></figure>
+          <figure class="g-item reveal"><img data-img="beach" alt="Palm-lined beach view" width="400" height="480" loading="lazy"><figcaption>Beach &amp; Garden <span>Nature's beauty</span></figcaption></figure>
+          <figure class="g-item g-item--wide reveal"><img data-img="terrace" alt="Terrace seating at golden hour" width="800" height="480" loading="lazy"><figcaption>Terrace <span>Golden hour</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LOCATION + ENQUIRY (map left, compact form right) ============ -->
+    <section class="section contact" id="location">
+      <div class="section__inner">
+        <header class="section__head reveal">
+          <p class="label">Location &amp; Enquiry</p>
+          <h2 class="section-title">Find Us &amp; Plan Your Stay</h2>
+          <span class="rule rule--center" aria-hidden="true"></span>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__left reveal">
+            <!-- MAP: set to Lonavala, Pune. To change it, edit the q= value in the iframe src (and mapQuery in js/script.js). -->
+            <div class="map glass" id="map">
+              <iframe title="Map showing Lonavala, Pune, Maharashtra" src="https://www.google.com/maps?q=Lonavala%2C%20Pune%2C%20Maharashtra&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <ul class="contact-list">
+              <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span data-config="address">Lonavala, Pune District, Maharashtra, India</span></li>
+              <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a data-config="phone" data-config-href="tel" href="tel:+918830532500">+91 88305 32500</a></li>
+              <li><i class="fa-regular fa-envelope" aria-hidden="true"></i><a data-config="email" data-config-href="mailto" href="#">your-email@example.com</a></li>
+              <li class="contact-list__cta"><i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i><a id="directionsLink" href="#" target="_blank" rel="noopener">Get Directions</a></li>
+            </ul>
+          </div>
+
+          <div class="contact__right reveal" id="enquire">
+            <form class="enquiry-form glass" id="enquiryForm" novalidate>
+              <h3 class="form-title">Send an Enquiry</h3>
+              <p class="form-note">This sends an enquiry only. It is not a booking or reservation.</p>
+              <div class="form-grid">
+                <div class="field field--3">
+                  <label for="fName">Full name</label>
+                  <input type="text" id="fName" name="name" autocomplete="name" required aria-describedby="fNameErr">
+                  <span class="field__err" id="fNameErr"></span>
+                </div>
+                <div class="field field--3">
+                  <label for="fPhone">Phone number</label>
+                  <input type="tel" id="fPhone" name="phone" autocomplete="tel" inputmode="tel" required aria-describedby="fPhoneErr">
+                  <span class="field__err" id="fPhoneErr"></span>
+                </div>
+                <div class="field field--3">
+                  <label for="fEmail">Email address</label>
+                  <input type="email" id="fEmail" name="email" autocomplete="email" required aria-describedby="fEmailErr">
+                  <span class="field__err" id="fEmailErr"></span>
+                </div>
+                <div class="field field--3">
+                  <label for="fType">Enquiry type</label>
+                  <select id="fType" name="type">
+                    <option>Room Enquiry</option>
+                    <option>Event Enquiry</option>
+                    <option>Dining Enquiry</option>
+                    <option>General Enquiry</option>
+                  </select>
+                </div>
+                <div class="field field--2">
+                  <label for="fCheckin">Check-in</label>
+                  <input type="date" id="fCheckin" name="checkin">
+                </div>
+                <div class="field field--2">
+                  <label for="fCheckout">Check-out</label>
+                  <input type="date" id="fCheckout" name="checkout" aria-describedby="fCheckoutErr">
+                  <span class="field__err" id="fCheckoutErr"></span>
+                </div>
+                <div class="field field--2 field--guests">
+                  <label for="fGuests">Guests</label>
+                  <input type="number" id="fGuests" name="guests" min="1" max="20" value="2" required aria-describedby="fGuestsErr">
+                  <span class="field__err" id="fGuestsErr"></span>
+                </div>
+                <div class="field field--full">
+                  <label for="fMessage">Message</label>
+                  <textarea id="fMessage" name="message" rows="2" maxlength="600" required aria-describedby="fMessageErr"></textarea>
+                  <span class="field__err" id="fMessageErr"></span>
+                </div>
+              </div>
+              <button type="submit" class="btn btn--gold btn--sm">Submit Enquiry <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+              <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="footer-col footer-col--brand">
+        <a href="#home" class="brand brand--footer" aria-label="Suncove Grand Hotel, back to top">
+          <i class="fa-solid fa-spa brand__emblem" aria-hidden="true"></i>
+          <span class="brand__text"><span class="brand__name">Suncove</span><span class="brand__sub">Grand Hotel</span></span>
+        </a>
+        <p>A coastal retreat of comfort, elegant dining and warm hospitality. More than a stay, it's an experience.</p>
+        <div class="social">
+          <span>Follow Us</span>
+          <!-- Replace each href="#" with the hotel's real social profile URL. -->
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer navigation">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Guest Info</h4>
+        <!-- EXAMPLE TIMINGS: replace with the hotel's real policies. -->
+        <ul>
+          <li><i class="fa-regular fa-clock" aria-hidden="true"></i><span>Reception: open 24 hours</span></li>
+          <li><i class="fa-solid fa-key" aria-hidden="true"></i><span>Check-in from 2:00 PM</span></li>
+          <li><i class="fa-solid fa-door-open" aria-hidden="true"></i><span>Check-out by 11:00 AM</span></li>
+          <li><i class="fa-solid fa-van-shuttle" aria-hidden="true"></i><span>Airport transfers on request</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col--contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span data-config="address">Lonavala, Pune District, Maharashtra, India</span></li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a data-config="phone" data-config-href="tel" href="tel:+918830532500">+91 88305 32500</a></li>
+          <li><i class="fa-regular fa-envelope" aria-hidden="true"></i><a data-config="email" data-config-href="mailto" href="#">your-email@example.com</a></li>
+          <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp enquiries welcome</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> Suncove Grand Hotel. All rights reserved.</p>
+      <p>Enquiries only. No online booking or payments on this site.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
